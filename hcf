@@ -1,0 +1,18 @@
+#include<stdio.h>
+int hcf(int a,int b)
+{
+    if(b==0)
+        return a;
+    else
+        return hcf(b,a%b);
+}
+int main()
+{
+    int a,b,c;
+    printf("Enter three numbers:\n");
+    scanf("%d%d%d",&a,&b,&c);
+    int x=hcf(a,b);
+    int y=hcf(x,c);
+    printf("The HCF is: %d",y);
+    return 0;
+}
